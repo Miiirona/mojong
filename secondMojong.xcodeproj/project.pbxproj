@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */; };
+		92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093CF2B061E0B001FBDC5 /* ContentView.swift */; };
+		92E093D22B061E0D001FBDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E093D12B061E0D001FBDC5 /* Assets.xcassets */; };
+		92E093D52B061E0D001FBDC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E093D42B061E0D001FBDC5 /* Preview Assets.xcassets */; };
+		92E093DF2B061E0D001FBDC5 /* secondMojongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093DE2B061E0D001FBDC5 /* secondMojongTests.swift */; };
+		92E093E92B061E0D001FBDC5 /* secondMojongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093E82B061E0D001FBDC5 /* secondMojongUITests.swift */; };
+		92E093EB2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E093DB2B061E0D001FBDC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E093C22B061E0B001FBDC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E093C92B061E0B001FBDC5;
+			remoteInfo = secondMojong;
+		};
+		92E093E52B061E0D001FBDC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E093C22B061E0B001FBDC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E093C92B061E0B001FBDC5;
+			remoteInfo = secondMojong;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92E093CA2B061E0B001FBDC5 /* secondMojong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secondMojong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongApp.swift; sourceTree = "<group>"; };
+		92E093CF2B061E0B001FBDC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92E093D12B061E0D001FBDC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92E093D42B061E0D001FBDC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92E093DA2B061E0D001FBDC5 /* secondMojongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secondMojongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E093DE2B061E0D001FBDC5 /* secondMojongTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongTests.swift; sourceTree = "<group>"; };
+		92E093E42B061E0D001FBDC5 /* secondMojongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secondMojongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E093E82B061E0D001FBDC5 /* secondMojongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongUITests.swift; sourceTree = "<group>"; };
+		92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92E093C72B061E0B001FBDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093D72B061E0D001FBDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093E12B061E0D001FBDC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92E093C12B061E0B001FBDC5 = {
+			isa = PBXGroup;
+			children = (
+				92E093CC2B061E0B001FBDC5 /* secondMojong */,
+				92E093DD2B061E0D001FBDC5 /* secondMojongTests */,
+				92E093E72B061E0D001FBDC5 /* secondMojongUITests */,
+				92E093CB2B061E0B001FBDC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92E093CB2B061E0B001FBDC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92E093CA2B061E0B001FBDC5 /* secondMojong.app */,
+				92E093DA2B061E0D001FBDC5 /* secondMojongTests.xctest */,
+				92E093E42B061E0D001FBDC5 /* secondMojongUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92E093CC2B061E0B001FBDC5 /* secondMojong */ = {
+			isa = PBXGroup;
+			children = (
+				92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */,
+				92E093CF2B061E0B001FBDC5 /* ContentView.swift */,
+				92E093D12B061E0D001FBDC5 /* Assets.xcassets */,
+				92E093D32B061E0D001FBDC5 /* Preview Content */,
+			);
+			path = secondMojong;
+			sourceTree = "<group>";
+		};
+		92E093D32B061E0D001FBDC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92E093D42B061E0D001FBDC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92E093DD2B061E0D001FBDC5 /* secondMojongTests */ = {
+			isa = PBXGroup;
+			children = (
+				92E093DE2B061E0D001FBDC5 /* secondMojongTests.swift */,
+			);
+			path = secondMojongTests;
+			sourceTree = "<group>";
+		};
+		92E093E72B061E0D001FBDC5 /* secondMojongUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92E093E82B061E0D001FBDC5 /* secondMojongUITests.swift */,
+				92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */,
+			);
+			path = secondMojongUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92E093C92B061E0B001FBDC5 /* secondMojong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E093EE2B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojong" */;
+			buildPhases = (
+				92E093C62B061E0B001FBDC5 /* Sources */,
+				92E093C72B061E0B001FBDC5 /* Frameworks */,
+				92E093C82B061E0B001FBDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = secondMojong;
+			productName = secondMojong;
+			productReference = 92E093CA2B061E0B001FBDC5 /* secondMojong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92E093D92B061E0D001FBDC5 /* secondMojongTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E093F12B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojongTests" */;
+			buildPhases = (
+				92E093D62B061E0D001FBDC5 /* Sources */,
+				92E093D72B061E0D001FBDC5 /* Frameworks */,
+				92E093D82B061E0D001FBDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E093DC2B061E0D001FBDC5 /* PBXTargetDependency */,
+			);
+			name = secondMojongTests;
+			productName = secondMojongTests;
+			productReference = 92E093DA2B061E0D001FBDC5 /* secondMojongTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92E093E32B061E0D001FBDC5 /* secondMojongUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E093F42B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojongUITests" */;
+			buildPhases = (
+				92E093E02B061E0D001FBDC5 /* Sources */,
+				92E093E12B061E0D001FBDC5 /* Frameworks */,
+				92E093E22B061E0D001FBDC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E093E62B061E0D001FBDC5 /* PBXTargetDependency */,
+			);
+			name = secondMojongUITests;
+			productName = secondMojongUITests;
+			productReference = 92E093E42B061E0D001FBDC5 /* secondMojongUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92E093C22B061E0B001FBDC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					92E093C92B061E0B001FBDC5 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					92E093D92B061E0D001FBDC5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 92E093C92B061E0B001FBDC5;
+					};
+					92E093E32B061E0D001FBDC5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 92E093C92B061E0B001FBDC5;
+					};
+				};
+			};
+			buildConfigurationList = 92E093C52B061E0B001FBDC5 /* Build configuration list for PBXProject "secondMojong" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92E093C12B061E0B001FBDC5;
+			productRefGroup = 92E093CB2B061E0B001FBDC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92E093C92B061E0B001FBDC5 /* secondMojong */,
+				92E093D92B061E0D001FBDC5 /* secondMojongTests */,
+				92E093E32B061E0D001FBDC5 /* secondMojongUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92E093C82B061E0B001FBDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E093D52B061E0D001FBDC5 /* Preview Assets.xcassets in Resources */,
+				92E093D22B061E0D001FBDC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093D82B061E0D001FBDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093E22B061E0D001FBDC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92E093C62B061E0B001FBDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */,
+				92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093D62B061E0D001FBDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E093DF2B061E0D001FBDC5 /* secondMojongTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E093E02B061E0D001FBDC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E093EB2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift in Sources */,
+				92E093E92B061E0D001FBDC5 /* secondMojongUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92E093DC2B061E0D001FBDC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E093C92B061E0B001FBDC5 /* secondMojong */;
+			targetProxy = 92E093DB2B061E0D001FBDC5 /* PBXContainerItemProxy */;
+		};
+		92E093E62B061E0D001FBDC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E093C92B061E0B001FBDC5 /* secondMojong */;
+			targetProxy = 92E093E52B061E0D001FBDC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		92E093EC2B061E0D001FBDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92E093ED2B061E0D001FBDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92E093EF2B061E0D001FBDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"secondMojong/Preview Content\"";
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92E093F02B061E0D001FBDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"secondMojong/Preview Content\"";
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92E093F22B061E0D001FBDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secondMojong.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/secondMojong";
+			};
+			name = Debug;
+		};
+		92E093F32B061E0D001FBDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secondMojong.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/secondMojong";
+			};
+			name = Release;
+		};
+		92E093F52B061E0D001FBDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = secondMojong;
+			};
+			name = Debug;
+		};
+		92E093F62B061E0D001FBDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Miiiro.secondMojongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = secondMojong;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92E093C52B061E0B001FBDC5 /* Build configuration list for PBXProject "secondMojong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E093EC2B061E0D001FBDC5 /* Debug */,
+				92E093ED2B061E0D001FBDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E093EE2B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E093EF2B061E0D001FBDC5 /* Debug */,
+				92E093F02B061E0D001FBDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E093F12B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojongTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E093F22B061E0D001FBDC5 /* Debug */,
+				92E093F32B061E0D001FBDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E093F42B061E0D001FBDC5 /* Build configuration list for PBXNativeTarget "secondMojongUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E093F52B061E0D001FBDC5 /* Debug */,
+				92E093F62B061E0D001FBDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92E093C22B061E0B001FBDC5 /* Project object */;
+}
