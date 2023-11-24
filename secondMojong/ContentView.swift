@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var weekStore = WeekStore()
+    @State private var showMainView = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if showMainView {
+            WeeklyView()
+                .environmentObject(weekStore)
+        } else {
+            SplashView()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        withAnimation {
+                            showMainView = true
+                        }
+                    }
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(WeekStore())
+
 }

@@ -14,7 +14,7 @@ extension Color {
     static let Body1 = Color("Body1")
     static let Body2 = Color("Body2")
     static let Body3 = Color("Body3")
-    static let Background = Color("Background")
+    static let Back = Color("Back")
     static let White1 = Color("White1")
     static let White2 = Color("White2")
     }

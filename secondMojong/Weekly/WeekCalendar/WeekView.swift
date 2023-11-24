@@ -8,6 +8,11 @@
 import SwiftUI
 
 extension Date {
+    
+    func dayNumberOfWeek() -> Int {
+           return (Calendar.current.dateComponents([.weekday], from: self).weekday ?? 0) - 1
+       }
+    
     func monthToString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM"
@@ -53,6 +58,39 @@ extension Date {
     func isInSameDay(as date: Date) -> Bool {
         isEqual(to: date, toGranularity: .day)
     }
+    
+    func dayOfWeek() -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEE"
+            return dateFormatter.string(from: self)
+        }
+        
+        func startOfMonth() -> Date {
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month], from: self)
+
+            return calendar.date(from: components)!
+        }
+
+        func endOfMonth() -> Date {
+            var components = DateComponents()
+            components.month = 1
+            components.day = -1
+            return Calendar.current.date(byAdding: components, to: startOfMonth())!
+        }
+
+        func allDaysTillEndOfMonth() -> [Date] {
+            var date = startOfMonth()
+            let endDate = endOfMonth()
+            var dates: [Date] = []
+
+            while date <= endDate {
+                dates.append(date)
+                date = Calendar.current.date(byAdding: .day, value: 1, to: date)!
+            }
+
+            return dates
+        }
 }
 
 struct WeekView: View {

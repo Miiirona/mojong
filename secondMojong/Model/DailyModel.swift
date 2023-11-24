@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct DailyModel : Identifiable, Hashable {
+    
+    var id: UUID
+    var day : Int
+    var title : String
+    var memo : String
+    var date: Date
+}
+
+
+
+

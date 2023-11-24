@@ -1,15 +1,27 @@
 //
-//  SplashView.swift
-//  secondMojong
+//  SwiftUIView.swift
+//  Mojong
 //
-//  Created by Hyemi on 11/16/23.
+//  Created by Hyemi on 11/13/23.
 //
 
 import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("APP_Logo")
+                    .resizable()
+                    .frame(width: 76, height: 86)
+            }
+            
+            .padding(.top, 280)
+            .padding(.bottom, 478)
+        }
     }
 }
 

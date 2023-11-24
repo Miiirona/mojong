@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WeekCalView: View {
+struct WholeWeekView: View {
     var body: some View {
         VStack {
             WeekHeaderView()
@@ -20,6 +20,6 @@ struct WeekCalView: View {
 }
 
 #Preview {
-    WeekCalView()
+    WholeWeekView()
         .environmentObject(WeekStore())
 }

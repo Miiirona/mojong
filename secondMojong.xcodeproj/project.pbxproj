@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92368D1E2B0DE9D1005379AD /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92368D1D2B0DE9D1005379AD /* Chip.swift */; };
+		9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0D92B0702F9008B502E /* WholeWeekView.swift */; };
+		9260A0DD2B0710D6008B502E /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DC2B0710D6008B502E /* MainHeaderView.swift */; };
+		9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DE2B071496008B502E /* DailyNoteView.swift */; };
+		9260A0E62B0B2590008B502E /* DailyNoteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0E52B0B2590008B502E /* DailyNoteSheet.swift */; };
+		9260A0E82B0B3326008B502E /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0E72B0B3326008B502E /* KeyboardExtension.swift */; };
+		9260A0EB2B0B35CA008B502E /* SelectCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0EA2B0B35CA008B502E /* SelectCropView.swift */; };
+		9260A0ED2B0B3734008B502E /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0EC2B0B3734008B502E /* MonthlyView.swift */; };
+		9260A0F12B0B38A3008B502E /* MonthlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0F02B0B38A3008B502E /* MonthlyHeaderView.swift */; };
+		929F3C062B0F368C00CC2CE7 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F3C052B0F368C00CC2CE7 /* DailyModel.swift */; };
+		92A7B7F32B0B8AA900DFA162 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7B7F22B0B8AA900DFA162 /* MonthView.swift */; };
+		92A7B7F52B0B8B6600DFA162 /* MonthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7B7F42B0B8B6600DFA162 /* MonthStore.swift */; };
 		92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */; };
 		92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093CF2B061E0B001FBDC5 /* ContentView.swift */; };
 		92E093D22B061E0D001FBDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E093D12B061E0D001FBDC5 /* Assets.xcassets */; };
@@ -14,6 +26,23 @@
 		92E093DF2B061E0D001FBDC5 /* secondMojongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093DE2B061E0D001FBDC5 /* secondMojongTests.swift */; };
 		92E093E92B061E0D001FBDC5 /* secondMojongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093E82B061E0D001FBDC5 /* secondMojongUITests.swift */; };
 		92E093EB2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */; };
+		92E093F82B061E6D001FBDC5 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093F72B061E6D001FBDC5 /* WeeklyView.swift */; };
+		92E093FA2B061E83001FBDC5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093F92B061E83001FBDC5 /* SplashView.swift */; };
+		92E094032B061F52001FBDC5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E094012B061F4E001FBDC5 /* Colors.swift */; };
+		92E094082B061F5F001FBDC5 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E094042B061F5B001FBDC5 /* TextStyles.swift */; };
+		92E0940E2B061F8A001FBDC5 /* NPSfont_extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940B2B061F8A001FBDC5 /* NPSfont_extrabold.ttf */; };
+		92E0940F2B061F8A001FBDC5 /* NPSfont_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940C2B061F8A001FBDC5 /* NPSfont_bold.ttf */; };
+		92E094102B061F8A001FBDC5 /* NPSfont_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940D2B061F8A001FBDC5 /* NPSfont_regular.ttf */; };
+		92E094112B061FF8001FBDC5 /* NPSfont_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940C2B061F8A001FBDC5 /* NPSfont_bold.ttf */; };
+		92E094122B061FF8001FBDC5 /* NPSfont_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940C2B061F8A001FBDC5 /* NPSfont_bold.ttf */; };
+		92E094132B061FFA001FBDC5 /* NPSfont_extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940B2B061F8A001FBDC5 /* NPSfont_extrabold.ttf */; };
+		92E094142B061FFB001FBDC5 /* NPSfont_extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940B2B061F8A001FBDC5 /* NPSfont_extrabold.ttf */; };
+		92E094152B061FFD001FBDC5 /* NPSfont_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940D2B061F8A001FBDC5 /* NPSfont_regular.ttf */; };
+		92E094162B061FFF001FBDC5 /* NPSfont_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0940D2B061F8A001FBDC5 /* NPSfont_regular.ttf */; };
+		92E094602B0641BD001FBDC5 /* WeekStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0945D2B0641BD001FBDC5 /* WeekStore.swift */; };
+		92E094612B0641BD001FBDC5 /* WeeksTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0945E2B0641BD001FBDC5 /* WeeksTabView.swift */; };
+		92E094622B0641BD001FBDC5 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0945F2B0641BD001FBDC5 /* WeekHeaderView.swift */; };
+		92E094642B0641F9001FBDC5 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E094632B0641F8001FBDC5 /* WeekView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92368D1D2B0DE9D1005379AD /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		9260A0D92B0702F9008B502E /* WholeWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeWeekView.swift; sourceTree = "<group>"; };
+		9260A0DC2B0710D6008B502E /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		9260A0DE2B071496008B502E /* DailyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteView.swift; sourceTree = "<group>"; };
+		9260A0E52B0B2590008B502E /* DailyNoteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteSheet.swift; sourceTree = "<group>"; };
+		9260A0E72B0B3326008B502E /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		9260A0EA2B0B35CA008B502E /* SelectCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCropView.swift; sourceTree = "<group>"; };
+		9260A0EC2B0B3734008B502E /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		9260A0F02B0B38A3008B502E /* MonthlyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyHeaderView.swift; sourceTree = "<group>"; };
+		929F3C052B0F368C00CC2CE7 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
+		92A7B7F22B0B8AA900DFA162 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		92A7B7F42B0B8B6600DFA162 /* MonthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthStore.swift; sourceTree = "<group>"; };
 		92E093CA2B061E0B001FBDC5 /* secondMojong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secondMojong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongApp.swift; sourceTree = "<group>"; };
 		92E093CF2B061E0B001FBDC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +85,18 @@
 		92E093E42B061E0D001FBDC5 /* secondMojongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secondMojongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E093E82B061E0D001FBDC5 /* secondMojongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongUITests.swift; sourceTree = "<group>"; };
 		92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondMojongUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92E093F72B061E6D001FBDC5 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
+		92E093F92B061E83001FBDC5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		92E094012B061F4E001FBDC5 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = secondMojong/Extension/Colors.swift; sourceTree = SOURCE_ROOT; };
+		92E094042B061F5B001FBDC5 /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextStyles.swift; path = secondMojong/Extension/TextStyles.swift; sourceTree = SOURCE_ROOT; };
+		92E0940B2B061F8A001FBDC5 /* NPSfont_extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NPSfont_extrabold.ttf; path = secondMojong/Extension/Fonts/NPSfont_extrabold.ttf; sourceTree = SOURCE_ROOT; };
+		92E0940C2B061F8A001FBDC5 /* NPSfont_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NPSfont_bold.ttf; path = secondMojong/Extension/Fonts/NPSfont_bold.ttf; sourceTree = SOURCE_ROOT; };
+		92E0940D2B061F8A001FBDC5 /* NPSfont_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NPSfont_regular.ttf; path = secondMojong/Extension/Fonts/NPSfont_regular.ttf; sourceTree = SOURCE_ROOT; };
+		92E094172B062011001FBDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E0945D2B0641BD001FBDC5 /* WeekStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekStore.swift; sourceTree = "<group>"; };
+		92E0945E2B0641BD001FBDC5 /* WeeksTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeksTabView.swift; sourceTree = "<group>"; };
+		92E0945F2B0641BD001FBDC5 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		92E094632B0641F8001FBDC5 /* WeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +124,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9260A0DB2B071091008B502E /* WeekCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9260A0D92B0702F9008B502E /* WholeWeekView.swift */,
+				92E0945F2B0641BD001FBDC5 /* WeekHeaderView.swift */,
+				92E0945E2B0641BD001FBDC5 /* WeeksTabView.swift */,
+				92E094632B0641F8001FBDC5 /* WeekView.swift */,
+				92E0945D2B0641BD001FBDC5 /* WeekStore.swift */,
+			);
+			path = WeekCalendar;
+			sourceTree = "<group>";
+		};
+		9260A0E22B0754AE008B502E /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				9260A0DE2B071496008B502E /* DailyNoteView.swift */,
+				9260A0E52B0B2590008B502E /* DailyNoteSheet.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		9260A0E92B0B35B8008B502E /* MainHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9260A0DC2B0710D6008B502E /* MainHeaderView.swift */,
+				9260A0EA2B0B35CA008B502E /* SelectCropView.swift */,
+				9260A0F22B0B43A5008B502E /* MonthlyCalendar */,
+			);
+			path = MainHeader;
+			sourceTree = "<group>";
+		};
+		9260A0F22B0B43A5008B502E /* MonthlyCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9260A0EC2B0B3734008B502E /* MonthlyView.swift */,
+				9260A0F02B0B38A3008B502E /* MonthlyHeaderView.swift */,
+				92A7B7F22B0B8AA900DFA162 /* MonthView.swift */,
+				92A7B7F42B0B8B6600DFA162 /* MonthStore.swift */,
+			);
+			path = MonthlyCalendar;
+			sourceTree = "<group>";
+		};
+		929F3C042B0F367700CC2CE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929F3C052B0F368C00CC2CE7 /* DailyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		92E093C12B061E0B001FBDC5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +197,14 @@
 		92E093CC2B061E0B001FBDC5 /* secondMojong */ = {
 			isa = PBXGroup;
 			children = (
+				929F3C042B0F367700CC2CE7 /* Model */,
 				92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */,
+				92E093F92B061E83001FBDC5 /* SplashView.swift */,
 				92E093CF2B061E0B001FBDC5 /* ContentView.swift */,
+				92E0945C2B064150001FBDC5 /* Weekly */,
+				92E094092B061F70001FBDC5 /* Extension */,
 				92E093D12B061E0D001FBDC5 /* Assets.xcassets */,
+				92E094172B062011001FBDC5 /* Info.plist */,
 				92E093D32B061E0D001FBDC5 /* Preview Content */,
 			);
 			path = secondMojong;
@@ -125,6 +233,39 @@
 				92E093EA2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift */,
 			);
 			path = secondMojongUITests;
+			sourceTree = "<group>";
+		};
+		92E094092B061F70001FBDC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92E0940A2B061F7B001FBDC5 /* Fonts */,
+				92E094042B061F5B001FBDC5 /* TextStyles.swift */,
+				92E094012B061F4E001FBDC5 /* Colors.swift */,
+				9260A0E72B0B3326008B502E /* KeyboardExtension.swift */,
+				92368D1D2B0DE9D1005379AD /* Chip.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		92E0940A2B061F7B001FBDC5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92E0940C2B061F8A001FBDC5 /* NPSfont_bold.ttf */,
+				92E0940B2B061F8A001FBDC5 /* NPSfont_extrabold.ttf */,
+				92E0940D2B061F8A001FBDC5 /* NPSfont_regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92E0945C2B064150001FBDC5 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				92E093F72B061E6D001FBDC5 /* WeeklyView.swift */,
+				9260A0E92B0B35B8008B502E /* MainHeader */,
+				9260A0DB2B071091008B502E /* WeekCalendar */,
+				9260A0E22B0754AE008B502E /* Note */,
+			);
+			path = Weekly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +372,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E0940F2B061F8A001FBDC5 /* NPSfont_bold.ttf in Resources */,
+				92E0940E2B061F8A001FBDC5 /* NPSfont_extrabold.ttf in Resources */,
 				92E093D52B061E0D001FBDC5 /* Preview Assets.xcassets in Resources */,
 				92E093D22B061E0D001FBDC5 /* Assets.xcassets in Resources */,
+				92E094102B061F8A001FBDC5 /* NPSfont_regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E094112B061FF8001FBDC5 /* NPSfont_bold.ttf in Resources */,
+				92E094152B061FFD001FBDC5 /* NPSfont_regular.ttf in Resources */,
+				92E094132B061FFA001FBDC5 /* NPSfont_extrabold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +394,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E094122B061FF8001FBDC5 /* NPSfont_bold.ttf in Resources */,
+				92E094162B061FFF001FBDC5 /* NPSfont_regular.ttf in Resources */,
+				92E094142B061FFB001FBDC5 /* NPSfont_extrabold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +407,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E094082B061F5F001FBDC5 /* TextStyles.swift in Sources */,
+				9260A0ED2B0B3734008B502E /* MonthlyView.swift in Sources */,
+				9260A0F12B0B38A3008B502E /* MonthlyHeaderView.swift in Sources */,
+				9260A0E82B0B3326008B502E /* KeyboardExtension.swift in Sources */,
 				92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */,
+				9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */,
+				92E094032B061F52001FBDC5 /* Colors.swift in Sources */,
+				92E094602B0641BD001FBDC5 /* WeekStore.swift in Sources */,
+				92E093FA2B061E83001FBDC5 /* SplashView.swift in Sources */,
+				92E094622B0641BD001FBDC5 /* WeekHeaderView.swift in Sources */,
+				9260A0DD2B0710D6008B502E /* MainHeaderView.swift in Sources */,
+				92A7B7F32B0B8AA900DFA162 /* MonthView.swift in Sources */,
+				92E094642B0641F9001FBDC5 /* WeekView.swift in Sources */,
+				929F3C062B0F368C00CC2CE7 /* DailyModel.swift in Sources */,
+				92368D1E2B0DE9D1005379AD /* Chip.swift in Sources */,
 				92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */,
+				92E094612B0641BD001FBDC5 /* WeeksTabView.swift in Sources */,
+				9260A0E62B0B2590008B502E /* DailyNoteSheet.swift in Sources */,
+				92A7B7F52B0B8B6600DFA162 /* MonthStore.swift in Sources */,
+				92E093F82B061E6D001FBDC5 /* WeeklyView.swift in Sources */,
+				9260A0EB2B0B35CA008B502E /* SelectCropView.swift in Sources */,
+				9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +595,7 @@
 				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = secondMojong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +625,7 @@
 				DEVELOPMENT_TEAM = 7FSJ5JJVGQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = secondMojong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

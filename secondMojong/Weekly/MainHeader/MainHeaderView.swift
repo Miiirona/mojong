@@ -7,70 +7,55 @@
 
 import SwiftUI
 
+class MainHeaderViewModel: ObservableObject {
+    @Published var isShownFullScreenCover = false
+}
+
 struct MainHeaderView: View {
-    
-    @State var showSheet: Bool = false
+    @ObservedObject var mainHeaderViewModel: MainHeaderViewModel
+//    @State var isShownFullScreenCover = false
+    @State var isExpanded: Bool = false
+    @Binding var showSelectCrop: Bool
     
     var body: some View {
+        VStack {
             HStack {
                 Button(action: {
-                    showSheet.toggle()
+                    showSelectCrop.toggle()
+                    isExpanded.toggle()
                 }, label: {
                     Text("참외")
                         .font(.CustomFont.H1)
                         .foregroundColor(.Primary)
                         .padding(.trailing,6)
-                    Image(systemName: "chevron.down")
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
                         .font(Font.custom("SF Pro", size: 15))
                         .bold()
                         .multilineTextAlignment(.center)
                         .foregroundColor(.Primary)
                         .frame(width: 14, height: 15, alignment: .center)
                 })
-                .sheet(isPresented: $showSheet, content: {
-                    SelectCropSheet()
-                        .presentationDetents([.fraction(0.4)])
-                        .presentationCornerRadius(15)
-                })
                 
                 Spacer()
-                Image("Icon_Calendar")
-                    .resizable()
-                    .frame(width: 29, height: 31)
-                NavigationLink(destination: Text("작물관리 페이지")) {
+                Button(action: {
+                    mainHeaderViewModel.isShownFullScreenCover.toggle()
+                }, label: {
                     Image("Icon_Logo")
                         .resizable()
                         .frame(width: 26, height: 28)
-                }
+                })
+                .fullScreenCover(isPresented: $mainHeaderViewModel.isShownFullScreenCover, content: {
+                    MonthlyView(mainHeaderViewModel: mainHeaderViewModel)
+                })
             }
-            .padding(.init(top: 0, leading: 20, bottom: 10, trailing: 22))
-
-    }
-}
-
-struct SelectCropSheet: View {
-    
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        ZStack(alignment: .topTrailing) {
-            Color.White1
-                .ignoresSafeArea()
-            Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Image(systemName: "xmark")
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.Body2)
-                    .font(Font.custom("SF Pro", size: 16))
-                    .fontWeight(.semibold)
-                    .padding()
-                
-            })
+            .padding(.init(top: 23, leading: 20, bottom: 29, trailing: 22))
+            
         }
+
     }
 }
 
-#Preview {
-    MainHeaderView()
-}
+//
+//#Preview {
+//    MainHeaderView(showSelectCrop: .constant(true))
+//}

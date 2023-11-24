@@ -27,7 +27,7 @@ class WeekStore: ObservableObject {
             week(for: Calendar.current.date(byAdding: .day, value: 7, to: date)!, with: 1)
         ]
     }
-
+    
     private func week(for date: Date, with index: Int) -> Week {
         var result: [Date] = .init()
 
@@ -41,6 +41,8 @@ class WeekStore: ObservableObject {
 
         return .init(index: index, dates: result, referenceDate: date)
     }
+
+
 
     func selectToday() {
         select(date: Date())
@@ -66,6 +68,8 @@ class WeekStore: ObservableObject {
         case .unknown:
             selectedDate = selectedDate
         }
+
+
 
         calcWeeks(with: selectedDate)
     }

@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-struct MonthlyCalView: View {
-    @Environment(\.presentationMode) var presentationMode
-    
+struct MonthlyView: View {
+    @ObservedObject var mainHeaderViewModel: MainHeaderViewModel
+    @State var showSelectCrop : Bool = false
+
     var body: some View {
-        MonthlyCalHeaderView()
+        NavigationView {
+            VStack {
+                MonthlyHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop)
+                if showSelectCrop {
+                    SelectCropView()
+                } else {
+                    MonthView()
+                        .environmentObject(MonthStore())
+                }
+                Spacer()
+            }
+            .padding(.top, 12)
+        }
     }
 }
-
-#Preview {
-    MonthlyCalView()
-}
+//
+//#Preview {
+//    MonthlyView()
+//}

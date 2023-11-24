@@ -111,7 +111,7 @@ struct WeekHeaderView: View {
                 }
             }
         }
-        .padding(.init(top: 5, leading: 28, bottom: -5, trailing: 10))
+        .padding(.init(top: 0, leading: 28, bottom: 0, trailing: 10))
     }
 }
 
