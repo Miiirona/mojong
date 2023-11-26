@@ -82,32 +82,9 @@ struct WeekHeaderView: View {
                 }
             } label: {
                 if weekStore.isSelectedDateToday() {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .inset(by: -0.5)
-                            .strokeBorder(Color.Body3)
-                            .frame(width: 63, height: 23)
-                            .padding(9)
-                        Text("TODAY")
-                            .font(.CustomFont.B2)
-                            .foregroundColor(.Body3)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 63, height: 11)
-                    }
+                    todayBtn(isToday: true)
                 } else {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .inset(by: -0.5)
-                            .foregroundColor(Color.Secondary01)
-                            .frame(width: 63, height: 22)
-                            .padding(9)
-                        Text("TODAY")
-                            .font(.CustomFont.B2)
-                            .foregroundColor(Color.White1)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 63, height: 11)
-                    }
-
+                    todayBtn(isToday: false)
                 }
             }
         }

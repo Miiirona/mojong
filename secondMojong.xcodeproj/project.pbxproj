@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92368D1E2B0DE9D1005379AD /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92368D1D2B0DE9D1005379AD /* Chip.swift */; };
+		92368D1E2B0DE9D1005379AD /* CropChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92368D1D2B0DE9D1005379AD /* CropChip.swift */; };
 		9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0D92B0702F9008B502E /* WholeWeekView.swift */; };
 		9260A0DD2B0710D6008B502E /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DC2B0710D6008B502E /* MainHeaderView.swift */; };
 		9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DE2B071496008B502E /* DailyNoteView.swift */; };
@@ -17,6 +17,8 @@
 		9260A0ED2B0B3734008B502E /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0EC2B0B3734008B502E /* MonthlyView.swift */; };
 		9260A0F12B0B38A3008B502E /* MonthlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0F02B0B38A3008B502E /* MonthlyHeaderView.swift */; };
 		929F3C062B0F368C00CC2CE7 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F3C052B0F368C00CC2CE7 /* DailyModel.swift */; };
+		929F3C082B10E9A000CC2CE7 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F3C072B10E9A000CC2CE7 /* Buttons.swift */; };
+		929F3C0A2B13360900CC2CE7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F3C092B13360900CC2CE7 /* DataModel.swift */; };
 		92A7B7F32B0B8AA900DFA162 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7B7F22B0B8AA900DFA162 /* MonthView.swift */; };
 		92A7B7F52B0B8B6600DFA162 /* MonthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7B7F42B0B8B6600DFA162 /* MonthStore.swift */; };
 		92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E093CD2B061E0B001FBDC5 /* secondMojongApp.swift */; };
@@ -63,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92368D1D2B0DE9D1005379AD /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		92368D1D2B0DE9D1005379AD /* CropChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropChip.swift; sourceTree = "<group>"; };
 		9260A0D92B0702F9008B502E /* WholeWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeWeekView.swift; sourceTree = "<group>"; };
 		9260A0DC2B0710D6008B502E /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		9260A0DE2B071496008B502E /* DailyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 		9260A0EC2B0B3734008B502E /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
 		9260A0F02B0B38A3008B502E /* MonthlyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyHeaderView.swift; sourceTree = "<group>"; };
 		929F3C052B0F368C00CC2CE7 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
+		929F3C072B10E9A000CC2CE7 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		929F3C092B13360900CC2CE7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		92A7B7F22B0B8AA900DFA162 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		92A7B7F42B0B8B6600DFA162 /* MonthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthStore.swift; sourceTree = "<group>"; };
 		92E093CA2B061E0B001FBDC5 /* secondMojong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secondMojong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				929F3C052B0F368C00CC2CE7 /* DailyModel.swift */,
+				929F3C092B13360900CC2CE7 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,7 +247,8 @@
 				92E094042B061F5B001FBDC5 /* TextStyles.swift */,
 				92E094012B061F4E001FBDC5 /* Colors.swift */,
 				9260A0E72B0B3326008B502E /* KeyboardExtension.swift */,
-				92368D1D2B0DE9D1005379AD /* Chip.swift */,
+				92368D1D2B0DE9D1005379AD /* CropChip.swift */,
+				929F3C072B10E9A000CC2CE7 /* Buttons.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -412,16 +418,18 @@
 				9260A0F12B0B38A3008B502E /* MonthlyHeaderView.swift in Sources */,
 				9260A0E82B0B3326008B502E /* KeyboardExtension.swift in Sources */,
 				92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */,
+				929F3C0A2B13360900CC2CE7 /* DataModel.swift in Sources */,
 				9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */,
 				92E094032B061F52001FBDC5 /* Colors.swift in Sources */,
 				92E094602B0641BD001FBDC5 /* WeekStore.swift in Sources */,
 				92E093FA2B061E83001FBDC5 /* SplashView.swift in Sources */,
 				92E094622B0641BD001FBDC5 /* WeekHeaderView.swift in Sources */,
 				9260A0DD2B0710D6008B502E /* MainHeaderView.swift in Sources */,
+				929F3C082B10E9A000CC2CE7 /* Buttons.swift in Sources */,
 				92A7B7F32B0B8AA900DFA162 /* MonthView.swift in Sources */,
 				92E094642B0641F9001FBDC5 /* WeekView.swift in Sources */,
 				929F3C062B0F368C00CC2CE7 /* DailyModel.swift in Sources */,
-				92368D1E2B0DE9D1005379AD /* Chip.swift in Sources */,
+				92368D1E2B0DE9D1005379AD /* CropChip.swift in Sources */,
 				92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */,
 				92E094612B0641BD001FBDC5 /* WeeksTabView.swift in Sources */,
 				9260A0E62B0B2590008B502E /* DailyNoteSheet.swift in Sources */,

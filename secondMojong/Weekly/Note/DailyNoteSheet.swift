@@ -50,6 +50,7 @@ class DailyNoteViewModel : ObservableObject {
 struct DailyNoteSheet: View {
     @ObservedObject var dailyNoteViewModel: DailyNoteViewModel
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.modelContext) private var noteData
     
     var body: some View {
         ZStack {
@@ -74,11 +75,11 @@ struct DailyNoteSheet: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         TextField("ex. 흠뻑 물 주기, 지주 세우기...", text: $dailyNoteViewModel.dailyNoteText, axis: .vertical)
-                            .font(.CustomFont.B1)
+                            .font(.CustomFont.B3)
                             .foregroundColor(.Body1)
                         Spacer()
                         Text("\(dailyNoteViewModel.dailyNoteText.count)/90")
-                            .font(.CustomFont.B3)
+                            .font(.CustomFont.B5)
                             .foregroundColor(.Body3)
                     }
                     .padding(.horizontal, 10)
@@ -95,7 +96,7 @@ struct DailyNoteSheet: View {
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("기록하기")
-                            .font(.CustomFont.H4)
+                            .font(.CustomFont.B1)
                             .foregroundColor(.White1)
                             .padding(.horizontal, 18)
                             .padding(.vertical, 8)

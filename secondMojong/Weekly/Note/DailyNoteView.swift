@@ -12,8 +12,6 @@ struct DailyNoteView: View {
     @StateObject var dailyNoteViewModel = DailyNoteViewModel()
     @State var showSheet: Bool = false
     
-//    @AppStorage("DailyNoteTitle") private var savedDailyNoteTitle: String = ""
-//    @AppStorage("DailyNoteText") private var savedDailyNoteText: String = ""
     
     var body: some View {
         Button(action: {
@@ -22,7 +20,7 @@ struct DailyNoteView: View {
             ZStack {
                 VStack(alignment: .center, spacing: 6) {
                     Text(weekStore.selectedDate.toString(format: "MM월 dd일"))
-                        .font(.CustomFont.B2)
+                        .font(.CustomFont.B4)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.Body1)
                         .onReceive(weekStore.$selectedDate, perform: { value in
@@ -32,7 +30,6 @@ struct DailyNoteView: View {
                         })
                         
                     
-//                    if dailyNoteViewModel.savedDailyNoteTitle.isEmpty && dailyNoteViewModel.savedDailyNoteText.isEmpty {
                     if dailyNoteViewModel.savedDailyNoteDate == weekStore.selectedDate.toString(format: "MM월 dd일") {
                         Text("기록이 있어요")
                             .font(.CustomFont.H4)

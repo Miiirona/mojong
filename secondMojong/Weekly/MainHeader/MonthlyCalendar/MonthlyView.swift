@@ -14,6 +14,7 @@ struct MonthlyView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // TODO: MainHeader로 바꾸기
                 MonthlyHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop)
                 if showSelectCrop {
                     SelectCropView()
@@ -27,7 +28,7 @@ struct MonthlyView: View {
         }
     }
 }
-//
-//#Preview {
-//    MonthlyView()
-//}
+
+#Preview {
+    MonthlyView(mainHeaderViewModel: MainHeaderViewModel())
+}

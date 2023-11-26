@@ -14,21 +14,20 @@ class MainHeaderViewModel: ObservableObject {
 struct MainHeaderView: View {
     @ObservedObject var mainHeaderViewModel: MainHeaderViewModel
 //    @State var isShownFullScreenCover = false
-    @State var isExpanded: Bool = false
     @Binding var showSelectCrop: Bool
+    @Binding var showMonthView: Bool
     
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
                     showSelectCrop.toggle()
-                    isExpanded.toggle()
                 }, label: {
                     Text("참외")
                         .font(.CustomFont.H1)
                         .foregroundColor(.Primary)
                         .padding(.trailing,6)
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                    Image(systemName: showSelectCrop ? "chevron.up" : "chevron.down")
                         .font(Font.custom("SF Pro", size: 15))
                         .bold()
                         .multilineTextAlignment(.center)
@@ -38,15 +37,19 @@ struct MainHeaderView: View {
                 
                 Spacer()
                 Button(action: {
-                    mainHeaderViewModel.isShownFullScreenCover.toggle()
+                    showMonthView.toggle()
+                    if showMonthView {
+                        showSelectCrop = false
+                    }
+//                    mainHeaderViewModel.isShownFullScreenCover.toggle()
                 }, label: {
                     Image("Icon_Logo")
                         .resizable()
                         .frame(width: 26, height: 28)
                 })
-                .fullScreenCover(isPresented: $mainHeaderViewModel.isShownFullScreenCover, content: {
-                    MonthlyView(mainHeaderViewModel: mainHeaderViewModel)
-                })
+//                .fullScreenCover(isPresented: $mainHeaderViewModel.isShownFullScreenCover, content: {
+//                    MonthlyView(mainHeaderViewModel: mainHeaderViewModel)
+//                })
             }
             .padding(.init(top: 23, leading: 20, bottom: 29, trailing: 22))
             

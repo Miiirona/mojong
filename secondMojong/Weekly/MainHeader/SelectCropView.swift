@@ -15,15 +15,13 @@ struct SelectCropView: View {
                     .resizable()
                     .frame(width: 18, height: 15)
                 Text("어떤 작물을 캘린더에 표시할까요?")
-                    .font(.CustomFont.B1)
+                    .font(.CustomFont.B3)
                     .foregroundColor(Color.Body2)
                 Spacer()
                 Button(action: {
                     
                 }, label: {
-                    Text("수정")
-                        .font(.CustomFont.B2)
-                        .foregroundColor(Color.Body3)
+                    deleteCrop(nonActiv: true, aktiv: false)
                 })
                 .frame(width: 40)
             }
@@ -35,13 +33,14 @@ struct SelectCropView: View {
                 
             }, label: {
                 Text("작물 추가")
-                    .font(.CustomFont.H4)
+                    .font(.CustomFont.B1)
                     .foregroundColor(Color.White1)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                     .background(Color.Secondary01)
                     .cornerRadius(8)
             })
+            .padding(.bottom, 40)
         }
     }
 }

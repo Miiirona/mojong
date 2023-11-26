@@ -10,13 +10,20 @@ import SwiftUI
 struct WeeklyView: View {
     @StateObject var mainHeaderViewModel = MainHeaderViewModel()
     @State var showSelectCrop : Bool = false
+    @State var showMonthView : Bool = false
+    
+    let monthStore = MonthStore()
 
     var body: some View {
         NavigationView{
             VStack {
-                MainHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop)
+                MainHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop, showMonthView: $showMonthView)
                 if showSelectCrop {
                     SelectCropView()
+                        .transition(.move(edge: .bottom))
+                } else if showMonthView {
+                    MonthView()
+                        .transition(.move(edge: .bottom))
                 } else {
                     WholeWeekView()
                     DailyNoteView()

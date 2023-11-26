@@ -9,17 +9,19 @@ import SwiftUI
 
 extension Font {
     enum CustomFont {
-        static let H1: Font = Font.custom("NPS-font-Bold", size: 30)
+        static let H1: Font = Font.custom("NPS-font-Bold", size: 32)
         static let H2: Font = Font.custom("NPS-font-Bold", size: 24)
         static let H3: Font = Font.custom("NPS-font-Bold", size: 20)
         static let H4: Font = Font.custom("NPS-font-Regular", size: 17)
         static let K1: Font = Font.custom("HiraMaruProN-W4", size: 14)
         static let K2: Font = Font.custom("HiraMaruProN-W4", size: 12)
         static let K3: Font = Font.custom("HiraMaruProN-W4", size: 10)
-        static let B1: Font = Font.custom("NPS-font-Regular", size: 14)
-        static let B2: Font = Font.custom("NPS-font-Regular", size: 12)
-        static let B3: Font = Font.custom("NPS-font-Regular", size: 10)
-        static let B4: Font = Font.custom("NPS-font-Regular", size: 6)
+        static let B1: Font = Font.custom("NPS-font-Regular", size: 18)
+        static let B2: Font = Font.custom("NPS-font-Regular", size: 16)
+        static let B3: Font = Font.custom("NPS-font-Regular", size: 14)
+        static let B4: Font = Font.custom("NPS-font-Regular", size: 12)
+        static let B5: Font = Font.custom("NPS-font-Regular", size: 10)
+        static let B6: Font = Font.custom("NPS-font-Regular", size: 6)
     }
 }
 
