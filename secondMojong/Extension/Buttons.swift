@@ -41,44 +41,68 @@ struct todayBtn: View {
 
 struct deleteCrop: View {
     
-    var nonActiv: Bool
-    var aktiv: Bool
+    var context: String
+    var isAktiv: Bool
+    var textColor: Color
+    var backgroundColor: Color?
     
     var body: some View {
-        if nonActiv {
-            Text("작물 삭제")
+        if isAktiv {
+            Text("\(context)")
                 .font(.CustomFont.B4)
-                .foregroundColor(.Body3)
+                .foregroundColor(textColor)
                 .multilineTextAlignment(.center)
                 .frame(width: 63, height: 11)
                 .padding(.vertical, 6)
                 .background(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.Body3)
+                        .stroke(textColor)
+                        .fill(backgroundColor ?? Color.clear)
                 )
-        } else if aktiv {
-                        Text("작물 삭제")
+        } else {
+            Text("\(context)")
                 .font(.CustomFont.B4)
-                .foregroundColor(.warningRed)
+                .foregroundColor(textColor)
                 .multilineTextAlignment(.center)
                 .frame(width: 63, height: 11)
                 .padding(.vertical, 6)
                 .background(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.warningRed)
+                        .stroke(textColor)
                 )
-                    } else {
-                        Text("삭제하기")
-                .font(.CustomFont.B4)
-                .foregroundColor(Color.White1)
-                .multilineTextAlignment(.center)
-                .frame(width: 63, height: 11)
-                .padding(.vertical, 6)
+        }
+    }
+}
+
+struct rectangleBtn: View {
+    
+    var context: String
+    var isFill: Bool
+    var textColor: Color
+    var backgroundColor: Color?
+    
+    var body: some View {
+        if isFill {
+            Text("\(context)")
+                .font(.CustomFont.B1)
+                .foregroundColor(textColor)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 8)
                 .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.warningRed)
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(backgroundColor!)
                 )
-                    }
+        } else {
+            Text("\(context)")
+                .font(.CustomFont.B1)
+                .foregroundColor(textColor)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 8)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(textColor)
+                )
+        }
     }
 }
 
@@ -90,9 +114,19 @@ struct deleteCrop: View {
             todayBtn(isToday: true)
         }
         VStack {
-            deleteCrop(nonActiv: true, aktiv: false)
-            deleteCrop(nonActiv: false, aktiv: true)
-            deleteCrop(nonActiv: false, aktiv: false)
+            deleteCrop(context: "작물 편집", isAktiv: false, textColor: Color.Body3)
+            deleteCrop(context: "작물 삭제", isAktiv: false, textColor: Color.WarningRed)
+            deleteCrop(context: "삭제하기", isAktiv: true, textColor: Color.White1, backgroundColor: Color.WarningRed)
+        }
+        VStack {
+            rectangleBtn(context: "작물 추가", isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
+            rectangleBtn(context: "끝냈어요", isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
+            rectangleBtn(context: "끝냈어요", isFill: true, textColor: Color.White2, backgroundColor: Color.Back)
+            rectangleBtn(context: "기록하기", isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
+            rectangleBtn(context: "취소하기", isFill: false, textColor: Color.Body2)
+            rectangleBtn(context: "추가하기", isFill: true, textColor: Color.White1, backgroundColor: Color.Primary)
+            rectangleBtn(context: "삭제하기", isFill: false, textColor: Color.WarningRed)
+            rectangleBtn(context: "수정하기", isFill: true, textColor: Color.White1, backgroundColor: Color.Body2)
         }
     }
 }

@@ -17,5 +17,6 @@ extension Color {
     static let Back = Color("Back")
     static let White1 = Color("White1")
     static let White2 = Color("White2")
+    static let WarningRed = Color("WarningRed")
     }
 

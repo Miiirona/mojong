@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SelectCropView: View {
+    
+    @State private var showAlert: Bool = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,25 +24,27 @@ struct SelectCropView: View {
                 Button(action: {
                     
                 }, label: {
-                    deleteCrop(nonActiv: true, aktiv: false)
+                    deleteCrop(context: "작물 편집", isAktiv: false, textColor: Color.Body3)
                 })
                 .frame(width: 40)
             }
             .frame(maxWidth: .infinity)
             .frame(height: 40)
-            .padding(.init(top: 0, leading: 24, bottom: 18, trailing: 9))
+            .padding(.init(top: 0, leading: 24, bottom: 18, trailing: 24))
             Spacer()
             Button(action: {
-                
+//                self.showAlert.toggle()
             }, label: {
-                Text("작물 추가")
-                    .font(.CustomFont.B1)
-                    .foregroundColor(Color.White1)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(Color.Secondary01)
-                    .cornerRadius(8)
+                rectangleBtn(context: "작물 추가", isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
             })
+//            .alert(showAlert: $showAlert) {
+//                AlertView(
+//                    title: "작물 추가 완료됩니다.",
+//                    btnIcon: Image(systemName: "checkmark.circle"),
+//                    cancleBtn: AlertButtonView(showAlert: $showAlert, action: {}, type: .CANCEL),
+//                    completedBtn: AlertButtonView(showAlert: $showAlert, action: {}, type: .COMPLETED)
+//                )
+//            }
             .padding(.bottom, 40)
         }
     }
