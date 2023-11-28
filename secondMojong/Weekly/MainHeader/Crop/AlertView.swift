@@ -51,13 +51,10 @@ public struct AlertButtonView: View {
             self.showAlert = false
             action()
         } label: {
-            
             Text(btnTitle)
                 .foregroundColor(self.btnColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
         }
-        
     }
 }
 

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		924543592B14CE6B008A2036 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924543582B14CE6B008A2036 /* SearchBar.swift */; };
+		9245435A2B14CE6B008A2036 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924543582B14CE6B008A2036 /* SearchBar.swift */; };
+		9245435B2B14CE6B008A2036 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924543582B14CE6B008A2036 /* SearchBar.swift */; };
+		9245435D2B14CE8F008A2036 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245435C2B14CE8F008A2036 /* SearchView.swift */; };
+		9245435E2B14CE8F008A2036 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245435C2B14CE8F008A2036 /* SearchView.swift */; };
+		9245435F2B14CE8F008A2036 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245435C2B14CE8F008A2036 /* SearchView.swift */; };
+		925682FC2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
+		925682FD2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
+		925682FE2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
 		9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0D92B0702F9008B502E /* WholeWeekView.swift */; };
 		9260A0DD2B0710D6008B502E /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DC2B0710D6008B502E /* MainHeaderView.swift */; };
 		9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260A0DE2B071496008B502E /* DailyNoteView.swift */; };
@@ -45,9 +54,9 @@
 		92E094622B0641BD001FBDC5 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0945F2B0641BD001FBDC5 /* WeekHeaderView.swift */; };
 		92E094642B0641F9001FBDC5 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E094632B0641F8001FBDC5 /* WeekView.swift */; };
 		92E707E92B13742F00C0B8BD /* CropChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707E82B13742F00C0B8BD /* CropChip.swift */; };
-		92E707EB2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* SearchCropSheet.swift */; };
-		92E707EC2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* SearchCropSheet.swift */; };
-		92E707ED2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* SearchCropSheet.swift */; };
+		92E707EB2B1380B600C0B8BD /* AddCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* AddCropView.swift */; };
+		92E707EC2B1380B600C0B8BD /* AddCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* AddCropView.swift */; };
+		92E707ED2B1380B600C0B8BD /* AddCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EA2B1380B600C0B8BD /* AddCropView.swift */; };
 		92E707F02B13981100C0B8BD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EF2B13981100C0B8BD /* AlertView.swift */; };
 		92E707F12B13981100C0B8BD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EF2B13981100C0B8BD /* AlertView.swift */; };
 		92E707F22B13981100C0B8BD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E707EF2B13981100C0B8BD /* AlertView.swift */; };
@@ -74,6 +83,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		924543582B14CE6B008A2036 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		9245435C2B14CE8F008A2036 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		925682FB2B14C6A30067905E /* RemoveCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCropView.swift; sourceTree = "<group>"; };
 		9260A0D92B0702F9008B502E /* WholeWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeWeekView.swift; sourceTree = "<group>"; };
 		9260A0DC2B0710D6008B502E /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		9260A0DE2B071496008B502E /* DailyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteView.swift; sourceTree = "<group>"; };
@@ -110,7 +122,7 @@
 		92E0945F2B0641BD001FBDC5 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 		92E094632B0641F8001FBDC5 /* WeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		92E707E82B13742F00C0B8BD /* CropChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropChip.swift; sourceTree = "<group>"; };
-		92E707EA2B1380B600C0B8BD /* SearchCropSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCropSheet.swift; sourceTree = "<group>"; };
+		92E707EA2B1380B600C0B8BD /* AddCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropView.swift; sourceTree = "<group>"; };
 		92E707EF2B13981100C0B8BD /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		92E707F32B139D5800C0B8BD /* CropModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		924543572B14CE51008A2036 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				924543582B14CE6B008A2036 /* SearchBar.swift */,
+				9245435C2B14CE8F008A2036 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		9260A0DB2B071091008B502E /* WeekCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +312,10 @@
 			isa = PBXGroup;
 			children = (
 				9260A0EA2B0B35CA008B502E /* SelectCropView.swift */,
-				92E707EA2B1380B600C0B8BD /* SearchCropSheet.swift */,
+				925682FB2B14C6A30067905E /* RemoveCropView.swift */,
+				92E707EA2B1380B600C0B8BD /* AddCropView.swift */,
 				92E707EF2B13981100C0B8BD /* AlertView.swift */,
+				924543572B14CE51008A2036 /* Search */,
 			);
 			path = Crop;
 			sourceTree = "<group>";
@@ -437,7 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E094082B061F5F001FBDC5 /* TextStyles.swift in Sources */,
-				92E707EB2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */,
+				92E707EB2B1380B600C0B8BD /* AddCropView.swift in Sources */,
 				92E707F42B139D5800C0B8BD /* CropModel.swift in Sources */,
 				9260A0ED2B0B3734008B502E /* MonthlyView.swift in Sources */,
 				9260A0F12B0B38A3008B502E /* MonthlyHeaderView.swift in Sources */,
@@ -446,6 +469,7 @@
 				92E707E92B13742F00C0B8BD /* CropChip.swift in Sources */,
 				929F3C0A2B13360900CC2CE7 /* DataModel.swift in Sources */,
 				9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */,
+				9245435D2B14CE8F008A2036 /* SearchView.swift in Sources */,
 				92E094032B061F52001FBDC5 /* Colors.swift in Sources */,
 				92E094602B0641BD001FBDC5 /* WeekStore.swift in Sources */,
 				92E093FA2B061E83001FBDC5 /* SplashView.swift in Sources */,
@@ -454,12 +478,14 @@
 				929F3C082B10E9A000CC2CE7 /* Buttons.swift in Sources */,
 				92A7B7F32B0B8AA900DFA162 /* MonthView.swift in Sources */,
 				92E094642B0641F9001FBDC5 /* WeekView.swift in Sources */,
+				924543592B14CE6B008A2036 /* SearchBar.swift in Sources */,
 				929F3C062B0F368C00CC2CE7 /* DailyModel.swift in Sources */,
 				92E093CE2B061E0B001FBDC5 /* secondMojongApp.swift in Sources */,
 				92E094612B0641BD001FBDC5 /* WeeksTabView.swift in Sources */,
 				9260A0E62B0B2590008B502E /* DailyNoteSheet.swift in Sources */,
 				92E707F02B13981100C0B8BD /* AlertView.swift in Sources */,
 				92A7B7F52B0B8B6600DFA162 /* MonthStore.swift in Sources */,
+				925682FC2B14C6A30067905E /* RemoveCropView.swift in Sources */,
 				92E093F82B061E6D001FBDC5 /* WeeklyView.swift in Sources */,
 				9260A0EB2B0B35CA008B502E /* SelectCropView.swift in Sources */,
 				9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */,
@@ -471,9 +497,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E093DF2B061E0D001FBDC5 /* secondMojongTests.swift in Sources */,
-				92E707EC2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */,
+				92E707EC2B1380B600C0B8BD /* AddCropView.swift in Sources */,
 				92E707F12B13981100C0B8BD /* AlertView.swift in Sources */,
+				9245435E2B14CE8F008A2036 /* SearchView.swift in Sources */,
+				925682FD2B14C6A30067905E /* RemoveCropView.swift in Sources */,
 				92E707F52B139D5800C0B8BD /* CropModel.swift in Sources */,
+				9245435A2B14CE6B008A2036 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,10 +510,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9245435B2B14CE6B008A2036 /* SearchBar.swift in Sources */,
 				92E093EB2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift in Sources */,
 				92E707F62B139D5800C0B8BD /* CropModel.swift in Sources */,
 				92E707F22B13981100C0B8BD /* AlertView.swift in Sources */,
-				92E707ED2B1380B600C0B8BD /* SearchCropSheet.swift in Sources */,
+				9245435F2B14CE8F008A2036 /* SearchView.swift in Sources */,
+				92E707ED2B1380B600C0B8BD /* AddCropView.swift in Sources */,
+				925682FE2B14C6A30067905E /* RemoveCropView.swift in Sources */,
 				92E093E92B061E0D001FBDC5 /* secondMojongUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

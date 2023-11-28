@@ -16,12 +16,14 @@ struct MainHeaderView: View {
 //    @State var isShownFullScreenCover = false
     @Binding var showSelectCrop: Bool
     @Binding var showMonthView: Bool
+    @Binding var showAddCrop: Bool
     
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
                     showSelectCrop.toggle()
+                    self.showAddCrop = false
                 }, label: {
                     Text("참외")
                         .font(.CustomFont.H1)
@@ -51,7 +53,7 @@ struct MainHeaderView: View {
 //                    MonthlyView(mainHeaderViewModel: mainHeaderViewModel)
 //                })
             }
-            .padding(.init(top: 23, leading: 20, bottom: 29, trailing: 22))
+            .padding(.init(top: 23, leading: 20, bottom: 0, trailing: 22))
             
         }
 
