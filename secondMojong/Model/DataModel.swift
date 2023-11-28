@@ -19,3 +19,5 @@ class Memo {
         self.MemoText = MemoText
     }
 }
+
+

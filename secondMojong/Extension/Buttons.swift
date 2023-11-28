@@ -86,7 +86,7 @@ struct rectangleBtn: View {
             Text("\(context)")
                 .font(.CustomFont.B1)
                 .foregroundColor(textColor)
-                .padding(.horizontal, 18)
+                .padding(.horizontal, 26)
                 .padding(.vertical, 8)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
@@ -96,7 +96,7 @@ struct rectangleBtn: View {
             Text("\(context)")
                 .font(.CustomFont.B1)
                 .foregroundColor(textColor)
-                .padding(.horizontal, 18)
+                .padding(.horizontal, 26)
                 .padding(.vertical, 8)
                 .background(
                     RoundedRectangle(cornerRadius: 8)

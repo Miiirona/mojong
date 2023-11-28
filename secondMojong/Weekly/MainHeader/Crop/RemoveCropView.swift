@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct RemoveCropView: View {
-    
-    @State private var showAlert: Bool = false
+    @Binding var showAlert: Bool
+    @Binding var showSelectCrop: Bool
+    @Binding var showAddCrop: Bool
+    @Binding var showRemoveCrop: Bool
     
     var body: some View {
         VStack {
@@ -22,7 +24,9 @@ struct RemoveCropView: View {
                     .foregroundColor(Color.Body2)
                 Spacer()
                 Button(action: {
-                    
+                    self.showSelectCrop = true
+                    self.showAddCrop = false
+                    self.showRemoveCrop = false
                 }, label: {
                     deleteCrop(context: "취소하기", isAktiv: false, textColor: Color.Body3)
                 })
@@ -54,5 +58,5 @@ struct RemoveCropView: View {
 }
 
 #Preview {
-    RemoveCropView()
+    RemoveCropView(showAlert: .constant(false), showSelectCrop: .constant(false), showAddCrop: .constant(false), showRemoveCrop: .constant(false))
 }

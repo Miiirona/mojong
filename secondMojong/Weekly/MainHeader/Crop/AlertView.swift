@@ -80,7 +80,8 @@ public struct AlertView: View {
     
     public var body: some View {
         ZStack {
-            Color.Back.ignoresSafeArea()
+            Color.black.ignoresSafeArea()
+                .opacity(0.8)
             VStack(spacing: 0) {
                 VStack(alignment: .center, spacing: 14) {
                     self.btnIcon

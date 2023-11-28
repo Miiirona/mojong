@@ -13,50 +13,63 @@ class MainHeaderViewModel: ObservableObject {
 
 struct MainHeaderView: View {
     @ObservedObject var mainHeaderViewModel: MainHeaderViewModel
-//    @State var isShownFullScreenCover = false
     @Binding var showSelectCrop: Bool
     @Binding var showMonthView: Bool
     @Binding var showAddCrop: Bool
+    @Binding var showRemoveCrop: Bool
     
     var body: some View {
         VStack {
             HStack {
-                Button(action: {
-                    showSelectCrop.toggle()
-                    self.showAddCrop = false
-                }, label: {
-                    Text("참외")
+                if showAddCrop {
+                    Text("작물 추가")
                         .font(.CustomFont.H1)
                         .foregroundColor(.Primary)
                         .padding(.trailing,6)
-                    Image(systemName: showSelectCrop ? "chevron.up" : "chevron.down")
-                        .font(Font.custom("SF Pro", size: 15))
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.Primary)
-                        .frame(width: 14, height: 15, alignment: .center)
-                })
+                } else if showRemoveCrop {
+                    Text("작물 삭제")
+                        .font(.CustomFont.H1)
+                        .foregroundColor(.WarningRed)
+                        .padding(.trailing, 6)
+                } else {
+                    Button(action: {
+                        showSelectCrop.toggle()
+                        self.showAddCrop = false
+                    }, label: {
+                        Text("참외")
+                            .font(.CustomFont.H1)
+                            .foregroundColor(.Primary)
+                            .padding(.trailing,6)
+                        Image(systemName: showSelectCrop ? "chevron.up" : "chevron.down")
+                            .font(Font.custom("SF Pro", size: 15))
+                            .bold()
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.Primary)
+                            .frame(width: 14, height: 15, alignment: .center)
+                    })
+                }
                 
                 Spacer()
-                Button(action: {
+                Button {
                     showMonthView.toggle()
                     if showMonthView {
                         showSelectCrop = false
                     }
-//                    mainHeaderViewModel.isShownFullScreenCover.toggle()
-                }, label: {
-                    Image("Icon_Logo")
-                        .resizable()
-                        .frame(width: 26, height: 28)
-                })
-//                .fullScreenCover(isPresented: $mainHeaderViewModel.isShownFullScreenCover, content: {
-//                    MonthlyView(mainHeaderViewModel: mainHeaderViewModel)
-//                })
+                } label: {
+                    if showMonthView {
+                        Image("HomeIcon")
+                            .resizable()
+                            .frame(width: 26, height: 28)
+                    } else {
+                        Image("CalIcon")
+                            .resizable()
+                            .frame(width: 26, height: 28)
+                    }
+                }
+                .opacity(showSelectCrop ? 0 : 1)
             }
             .padding(.init(top: 23, leading: 20, bottom: 0, trailing: 22))
-            
         }
-
     }
 }
 

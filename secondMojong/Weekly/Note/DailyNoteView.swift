@@ -11,6 +11,8 @@ struct DailyNoteView: View {
     @EnvironmentObject var weekStore: WeekStore
     @StateObject var dailyNoteViewModel = DailyNoteViewModel()
     @State var showSheet: Bool = false
+    @State var showDeleteAlert: Bool = false
+    @State var showEditAlert: Bool = false
     
     
     var body: some View {
@@ -53,7 +55,7 @@ struct DailyNoteView: View {
             .padding(.bottom, 12)
         })
         .sheet(isPresented: $showSheet, content: {
-            DailyNoteSheet(dailyNoteViewModel: dailyNoteViewModel)
+            DailyNoteSheet(dailyNoteViewModel: dailyNoteViewModel, showDeleteAlert: $showDeleteAlert, showEditAlert: $showEditAlert)
                 .presentationDetents([.fraction(0.4)])
                 .presentationCornerRadius(15)
         })

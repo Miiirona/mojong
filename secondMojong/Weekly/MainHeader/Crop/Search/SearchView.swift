@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WrappingHStack
 
 struct SearchView: View {
     @State private var searchText = ""
@@ -15,43 +16,52 @@ struct SearchView: View {
     let columns = [GridItem(.adaptive(minimum: 100))]
     
     var body: some View {
-        VStack(spacing: 0) {
-            SearchBar(text: $searchText)
-            ScrollView {
-                LazyVGrid(columns: columns, alignment: .leading) {
-                    ForEach(crops.indices.filter({ !searchText.isEmpty && crops[$0].name.contains(searchText) && !crops[$0].isSelected }), id: \.self) { index in
-                        Button(action: {
-                            crops[index].isSelected = true
-                            isAnyCropSelected = true
-                        }) {
-                            CropChip(name: crops[index].name, isFill: false, textColor: Color.Primary)
-                                .padding(.top, 0)
-                        }
+        ZStack {
+            VStack(spacing: 0) {
+                SearchBar(text: $searchText)
+                
+                WrappingHStack {
+                    ForEach(crops.indices.filter({
+                        return !searchText.isEmpty && HangulUtil.matchesPattern(crops[$0].name, searchText) && !crops[$0].isSelected
+                    }), id: \.self) { index in
+                        CropChip(name: crops[index].name, isFill: false, textColor: Color.Primary)
+                            .padding(.trailing, 10)
+                            .onTapGesture {
+                                crops[index].isSelected = true
+                                isAnyCropSelected = true
+                            }
                     }
-                    Spacer()
                 }
-                .padding(.horizontal, 23)
-                .frame(height: 120)
-            }
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(Color.White2)
+//                .frame(minHeight: 120)
+                .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-            
-            ScrollView {
-                LazyVGrid(columns: columns, alignment: .leading) {
-                    ForEach(crops.indices.filter({ crops[$0].isSelected }), id: \.self) { index in
-                        Button(action: {
-                            crops[index].isSelected = false
-                            isAnyCropSelected = crops.contains { $0.isSelected }
-                        }) {
+                
+                VStack {
+                    if !searchText.isEmpty {
+                        Rectangle()
+                            .frame(height: 1)
+                            .foregroundColor(Color.White2)
+                            .padding(.vertical, 10)
+                    }
+                    WrappingHStack {
+                        ForEach(crops.indices.filter({ crops[$0].isSelected }), id: \.self) { index in
                             CropChip(name: crops[index].name, isFill: false, textColor: Color.WarningRed, isRemovable: true)
-                                .padding(.top)
+                                .padding(.trailing, 10)
+                                .onTapGesture {
+                                    crops[index].isSelected = false
+                                    isAnyCropSelected = crops.contains { $0.isSelected }
+                                }
                         }
                     }
-                    Spacer()
+                    .padding(.horizontal, 23)
                 }
-                .padding(.horizontal, 23)
+                
+                Spacer()
+            }
+            if searchText.isEmpty {
+                Image("APP_Logo_F")
+                    .resizable()
+                    .frame(width: 44, height: 52)
             }
         }
     }
@@ -59,4 +69,5 @@ struct SearchView: View {
 
 #Preview {
     SearchView(isAnyCropSelected: .constant(false))
+        .previewLayout(.sizeThatFits)
 }

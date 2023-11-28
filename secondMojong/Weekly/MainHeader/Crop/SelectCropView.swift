@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectCropView: View {
     @Binding var showAddCrop: Bool
+    @Binding var showRemoveCrop: Bool
+    let columns = [GridItem(.adaptive(minimum: 100))]
         
     var body: some View {
         VStack {
@@ -21,15 +23,19 @@ struct SelectCropView: View {
                     .foregroundColor(Color.Body2)
                 Spacer()
                 Button(action: {
-                    //RemoveCropView 띄우기
+                    showRemoveCrop.toggle()
                 }, label: {
-                    deleteCrop(context: "작물 삭제", isAktiv: false, textColor: Color.Body3)
+                    deleteCrop(context: "작물 삭제", isAktiv: false, textColor: Color.WarningRed)
                 })
                 .frame(width: 40)
             }
             .frame(maxWidth: .infinity)
             .frame(height: 40)
             .padding(.init(top: 0, leading: 24, bottom: 18, trailing: 24))
+            Text("아직 추가된 작물이 없어요")
+//            LazyVGrid(columns: columns, content: {
+//
+//            })
             Spacer()
             Button(action: {
                 showAddCrop.toggle()
@@ -42,5 +48,5 @@ struct SelectCropView: View {
 }
 
 #Preview {
-    SelectCropView(showAddCrop: .constant(false))
+    SelectCropView(showAddCrop: .constant(false), showRemoveCrop: .constant(false))
 }

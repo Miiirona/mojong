@@ -12,24 +12,25 @@ struct WeeklyView: View {
     @State var showSelectCrop : Bool = false
     @State var showMonthView : Bool = false
     @State var showAddCrop: Bool = false
+    @State var showRemoveCrop: Bool = false
+    @State var showAlert: Bool = false
+
     
     let monthStore = MonthStore()
     
     var body: some View {
-        NavigationView{
             VStack {
-                MainHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop, showMonthView: $showMonthView, showAddCrop: $showAddCrop)
+                MainHeaderView(mainHeaderViewModel: mainHeaderViewModel, showSelectCrop: $showSelectCrop, showMonthView: $showMonthView, showAddCrop: $showAddCrop, showRemoveCrop: $showRemoveCrop)
                 if showSelectCrop {
-                    if showAddCrop {
+                    if showRemoveCrop {
+                        RemoveCropView(showAlert: $showAlert, showSelectCrop: $showAddCrop, showAddCrop: $showAddCrop, showRemoveCrop: $showRemoveCrop)
+                    } else if showAddCrop {
                         AddCropView(showSelectCrop: $showSelectCrop, showAddCrop: $showAddCrop)
-                            .transition(.move(edge: .bottom))
                     } else {
-                        SelectCropView(showAddCrop: $showAddCrop)
-                            .transition(.move(edge: .bottom))
+                        SelectCropView(showAddCrop: $showAddCrop, showRemoveCrop: $showRemoveCrop)
                     }
                 }else if showMonthView {
                     MonthView()
-                        .transition(.move(edge: .bottom))
                 } else {
                     WholeWeekView()
                     DailyNoteView()
@@ -37,7 +38,6 @@ struct WeeklyView: View {
                 Spacer()
             }
             .padding(.top, 12)
-        }
     }
 }
 

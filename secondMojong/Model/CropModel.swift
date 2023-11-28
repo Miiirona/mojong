@@ -7,6 +7,10 @@
 
 import Foundation
 
+class CropList: ObservableObject {
+    @Published var crops: [Crop] = [cherryTomato, koreanMelon, cabbage, chiliPepper, lettuce, leafMustard, grape, eggplant]
+}
+
 struct Crop {
     var name: String
     var isSelected: Bool = false
@@ -688,6 +692,3 @@ var eggplant: Crop = Crop(
 //                        middle: <#T##[Task]#>,
 //                        last: <#T##[Task]#>),
 //   ])
-
-var crops: [Crop] = [cherryTomato, koreanMelon, cabbage, chiliPepper, lettuce, leafMustard, grape, eggplant]
-
