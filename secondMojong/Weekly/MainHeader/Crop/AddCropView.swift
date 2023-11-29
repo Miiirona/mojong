@@ -12,6 +12,8 @@ struct AddCropView: View {
     @Binding var showSelectCrop: Bool
     @Binding var showAddCrop: Bool
     @State private var isAnyCropSelected: Bool = false
+    @State var crops: [Crop] = [cherryTomato, koreanMelon, cabbage, chiliPepper, lettuce, leafMustard, grape, eggplant]
+    @EnvironmentObject var cropList: CropList
     
     var body: some View {
             VStack(spacing: 0) {
@@ -29,13 +31,14 @@ struct AddCropView: View {
                     }, label: {
                         deleteCrop(context: "취소하기", isAktiv: false, textColor: Color.Body3)
                     })
+                    .opacity(cropList.crops.isEmpty ? 0 : 1)
                     .frame(width: 40)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 40)
                 .padding(.init(top: 0, leading: 24, bottom: 10, trailing: 24))
                 
-                SearchView(isAnyCropSelected: $isAnyCropSelected)
+                SearchView(crops: $crops, isAnyCropSelected: $isAnyCropSelected)
                     .padding(.horizontal, 16)
                 Spacer()
                 
@@ -58,7 +61,18 @@ struct AddCropView: View {
                             type: .CANCEL),
                         completedBtn: AlertButtonView(
                             showAlert: $showAlert,
-                            action: {},
+                            action: {
+                                // TODO: 배열에 추가할 떄 중복 검사 필요!
+                                for crop in crops {
+                                    if crop.isSelected {
+                                        if cropList.crops.isEmpty {
+                                            cropList.currentSelectedCrop = crop
+                                        }
+                                        cropList.crops.append(crop)
+                                    }
+                                }
+                                self.showAddCrop = false
+                            },
                             type: .COMPLETED)
                     )
                 }

@@ -15,6 +15,7 @@ struct DailyNoteView: View {
     @State var showSheet: Bool = false
     @Query private var lists: [DailyNoteModel]
     @State private var currentDailyNote: DailyNoteModel?
+    @EnvironmentObject var cropList: CropList
     
     var body: some View {
         Button(action: {
@@ -39,7 +40,7 @@ struct DailyNoteView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(.Secondary01)
                     } else {
-                        Text("오늘 참외는 어땠나요?")
+                        Text("오늘 \(cropList.currentSelectedCrop.name)는 어땠나요?")
                             .font(.CustomFont.H4)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.Secondary01)

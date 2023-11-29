@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var weekStore = WeekStore()
+    @StateObject var cropList = CropList()
     @State private var showMainView = false
     var body: some View {
         if showMainView {
             WeeklyView()
                 .environmentObject(weekStore)
+                .environmentObject(cropList)
         } else {
             SplashView()
                 .onAppear {

@@ -10,7 +10,9 @@ import SwiftUI
 struct SelectCropView: View {
     @Binding var showAddCrop: Bool
     @Binding var showRemoveCrop: Bool
+    @Binding var showSelectCrop: Bool
     let columns = [GridItem(.adaptive(minimum: 100))]
+    @EnvironmentObject var cropList: CropList
         
     var body: some View {
         VStack {
@@ -32,11 +34,25 @@ struct SelectCropView: View {
             .frame(maxWidth: .infinity)
             .frame(height: 40)
             .padding(.init(top: 0, leading: 24, bottom: 18, trailing: 24))
-            Text("아직 추가된 작물이 없어요")
-//            LazyVGrid(columns: columns, content: {
-//
-//            })
+            if cropList.crops.isEmpty {
+                Text("아직 추가된 작물이 없어요")
+            } else {
+                //            LazyVGrid(columns: columns, content: {
+                //
+                //            })
+
+                ForEach(cropList.crops, id: \.name) { crop in
+                    Button {
+                        cropList.currentSelectedCrop = crop
+                        showSelectCrop.toggle()
+                    } label: {
+                        Text(crop.name)
+                    }
+                }
+            }
+            
             Spacer()
+            
             Button(action: {
                 showAddCrop.toggle()
             }, label: {
@@ -48,5 +64,5 @@ struct SelectCropView: View {
 }
 
 #Preview {
-    SelectCropView(showAddCrop: .constant(false), showRemoveCrop: .constant(false))
+    SelectCropView(showAddCrop: .constant(false), showRemoveCrop: .constant(false), showSelectCrop: .constant(false))
 }

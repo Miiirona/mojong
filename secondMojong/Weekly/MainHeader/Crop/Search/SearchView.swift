@@ -10,7 +10,7 @@ import WrappingHStack
 
 struct SearchView: View {
     @State private var searchText = ""
-    @State private var crops: [Crop] = [cherryTomato, koreanMelon, cabbage, chiliPepper, lettuce, leafMustard, grape, eggplant]
+    @Binding var crops: [Crop]
     @Binding var isAnyCropSelected: Bool
     
     let columns = [GridItem(.adaptive(minimum: 100))]
@@ -67,7 +67,7 @@ struct SearchView: View {
     }
 }
 
-#Preview {
-    SearchView(isAnyCropSelected: .constant(false))
-        .previewLayout(.sizeThatFits)
-}
+//#Preview {
+//    SearchView(isAnyCropSelected: .constant(false))
+//        .previewLayout(.sizeThatFits)
+//}

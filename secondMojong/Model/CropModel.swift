@@ -8,7 +8,41 @@
 import Foundation
 
 class CropList: ObservableObject {
-    @Published var crops: [Crop] = [cherryTomato, koreanMelon, cabbage, chiliPepper, lettuce, leafMustard, grape, eggplant]
+    @Published var crops: [Crop] = []
+    @Published var currentSelectedCrop: Crop
+    
+    init() {
+        currentSelectedCrop = Crop(
+            name: "",
+            schedule: [
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: [])
+            ],
+            problem: [
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: []),
+                CropMonth(first: [], middle: [], last: [])
+            ])
+    }
 }
 
 struct Crop {
@@ -29,7 +63,6 @@ struct Task {
     var detail: String?
 }
 
-// MARK: Sample Data
 var cherryTomato: Crop = Crop(
     name: "방울토마토",
     schedule: [
@@ -147,6 +180,9 @@ var koreanMelon: Crop = Crop(
               CropMonth(first: [Task(title: "고온 주의", detail: "생리장해 발생, 병해충 다발생")],
                         middle: [],
                         last: []),
+              CropMonth(first: [], middle: [], last: []),
+              // TODO: 여기 아닐지도...
+              CropMonth(first: [], middle: [], last: []),
               CropMonth(first: [], middle: [], last: []),
               CropMonth(first: [],
                         middle: [Task(title: "혹한 및 저온 주의", detail: "초기생육불량 및 정식 지연 주의")],
