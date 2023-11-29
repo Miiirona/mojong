@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WeekHeaderView: View {
     @EnvironmentObject var weekStore: WeekStore
+    @EnvironmentObject var dailyNoteViewModel: DailyNoteViewModel
     @State var showDatePicker: Bool = false
 
     var body: some View {
@@ -88,6 +89,9 @@ struct WeekHeaderView: View {
                 }
             }
         }
+        .onChange(of: weekStore.selectedDate, perform: { newDate in
+            dailyNoteViewModel.setSelectedDate(newDate) // 날짜 변경 감지 시 로직 실행
+        })
         .padding(.init(top: 0, leading: 28, bottom: 0, trailing: 10))
     }
 }
@@ -96,5 +100,6 @@ struct WeekHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         WeekHeaderView()
             .environmentObject(WeekStore())
+            .environmentObject(DailyNoteViewModel())
     }
 }

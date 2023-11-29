@@ -5,7 +5,9 @@
 //  Created by Philipp Knoblauch on 13.05.23.
 //
 
+
 import SwiftUI
+import SwiftData
 
 extension Date {
     
@@ -95,7 +97,12 @@ extension Date {
 
 struct WeekView: View {
     @EnvironmentObject var weekStore: WeekStore
-
+    
+    @Environment(\.modelContext) var context
+    @StateObject var dailyNoteViewModel = DailyNoteViewModel()
+    @State var showSheet: Bool = false
+    @Query private var lists: [DailyNoteModel]
+    @State private var currentDailyNote: DailyNoteModel?
     var week: Week
 
     var body: some View {
@@ -127,12 +134,46 @@ struct WeekView: View {
                 }.onTapGesture {
                     withAnimation(.easeInOut(duration: 0.4)) {
                         weekStore.selectedDate = week.dates[i]
+                        
+                        let selectedDate = week.dates[i]
+//                        let selectedDate = weekStore.selectedDate
+                        dailyNoteViewModel.setSelectedDate(selectedDate)
+                        checkForExistingNote()
+                        print("주 날짜 탭함 \(dailyNoteViewModel.isNotePresent)\n")
                     }
                 }
                 .frame(maxWidth: .infinity)
             }
         }
         .padding(.horizontal, 15)
+    }
+    
+    private func checkForExistingNote() {
+        print("checkForExistingNote 기록이 있나~")
+        let selectedDateString = dateFormatter.string(from: weekStore.selectedDate)
+        
+        if let existingNote = fetchDailyNote(forDate: weekStore.selectedDate) {
+            currentDailyNote = existingNote
+            dailyNoteViewModel.isNotePresent = true
+        } else {
+            currentDailyNote = nil
+            dailyNoteViewModel.isNotePresent = false
+        }
+        print(dailyNoteViewModel.isNotePresent)
+    }
+    
+    // MARK: Read
+    private func fetchDailyNote(forDate date: Date) -> DailyNoteModel? {
+        let dateString = dateFormatter.string(from: date)
+        return lists.first { dateFormatter.string(from: $0.saveAt) == dateString }
+    }
+    
+    // 날짜 형식 지정을 위한 DateFormatter
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 MM월 dd일"
+        formatter.timeZone = TimeZone.current
+        return formatter
     }
 }
 

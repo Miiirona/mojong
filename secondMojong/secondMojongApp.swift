@@ -5,30 +5,35 @@
 //  Created by Hyemi on 11/16/23.
 //
 
+
 import SwiftUI
 import SwiftData
 
 @main
 struct secondMojongApp: App {
     
-    var modelContainer: ModelContainer = {
-        let schema = Schema([Memo.self])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-        
+    private var container: ModelContainer
+    @StateObject var dailyNoteViewModel = DailyNoteViewModel()
+    
+    init() {
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            container = try ModelContainer(
+                for: DailyNoteModel.self
+            )
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Failed to configure SwiftData container.")
         }
-    }()
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
+    }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
                 .environmentObject(MonthStore())
-                .modelContainer(modelContainer)
+                .modelContainer(container)
+                .environmentObject(dailyNoteViewModel)
         }
-        .modelContainer(for: Memo.self)
     }
 }
+

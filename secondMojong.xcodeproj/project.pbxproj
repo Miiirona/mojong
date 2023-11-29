@@ -14,6 +14,15 @@
 		9245435E2B14CE8F008A2036 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245435C2B14CE8F008A2036 /* SearchView.swift */; };
 		9245435F2B14CE8F008A2036 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245435C2B14CE8F008A2036 /* SearchView.swift */; };
 		924543622B163C42008A2036 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 924543612B163C42008A2036 /* WrappingHStack */; };
+		925020A62B176E5800E8DF46 /* DailyNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A52B176E5800E8DF46 /* DailyNoteModel.swift */; };
+		925020A72B176E5800E8DF46 /* DailyNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A52B176E5800E8DF46 /* DailyNoteModel.swift */; };
+		925020A82B176E5800E8DF46 /* DailyNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A52B176E5800E8DF46 /* DailyNoteModel.swift */; };
+		925020AA2B176E6900E8DF46 /* DailyNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A92B176E6900E8DF46 /* DailyNoteViewModel.swift */; };
+		925020AB2B176E6900E8DF46 /* DailyNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A92B176E6900E8DF46 /* DailyNoteViewModel.swift */; };
+		925020AC2B176E6A00E8DF46 /* DailyNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020A92B176E6900E8DF46 /* DailyNoteViewModel.swift */; };
+		925020AE2B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020AD2B176E8700E8DF46 /* DailyNoteEditSheet.swift */; };
+		925020AF2B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020AD2B176E8700E8DF46 /* DailyNoteEditSheet.swift */; };
+		925020B02B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925020AD2B176E8700E8DF46 /* DailyNoteEditSheet.swift */; };
 		925682FC2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
 		925682FD2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
 		925682FE2B14C6A30067905E /* RemoveCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925682FB2B14C6A30067905E /* RemoveCropView.swift */; };
@@ -86,6 +95,9 @@
 /* Begin PBXFileReference section */
 		924543582B14CE6B008A2036 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		9245435C2B14CE8F008A2036 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		925020A52B176E5800E8DF46 /* DailyNoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteModel.swift; sourceTree = "<group>"; };
+		925020A92B176E6900E8DF46 /* DailyNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteViewModel.swift; sourceTree = "<group>"; };
+		925020AD2B176E8700E8DF46 /* DailyNoteEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoteEditSheet.swift; sourceTree = "<group>"; };
 		925682FB2B14C6A30067905E /* RemoveCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCropView.swift; sourceTree = "<group>"; };
 		9260A0D92B0702F9008B502E /* WholeWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeWeekView.swift; sourceTree = "<group>"; };
 		9260A0DC2B0710D6008B502E /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
@@ -180,6 +192,9 @@
 			children = (
 				9260A0DE2B071496008B502E /* DailyNoteView.swift */,
 				9260A0E52B0B2590008B502E /* DailyNoteSheet.swift */,
+				925020AD2B176E8700E8DF46 /* DailyNoteEditSheet.swift */,
+				925020A52B176E5800E8DF46 /* DailyNoteModel.swift */,
+				925020A92B176E6900E8DF46 /* DailyNoteViewModel.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -475,6 +490,7 @@
 				9260A0E82B0B3326008B502E /* KeyboardExtension.swift in Sources */,
 				92E093D02B061E0B001FBDC5 /* ContentView.swift in Sources */,
 				92E707E92B13742F00C0B8BD /* CropChip.swift in Sources */,
+				925020AA2B176E6900E8DF46 /* DailyNoteViewModel.swift in Sources */,
 				929F3C0A2B13360900CC2CE7 /* DataModel.swift in Sources */,
 				9260A0DA2B0702F9008B502E /* WholeWeekView.swift in Sources */,
 				9245435D2B14CE8F008A2036 /* SearchView.swift in Sources */,
@@ -495,7 +511,9 @@
 				92A7B7F52B0B8B6600DFA162 /* MonthStore.swift in Sources */,
 				925682FC2B14C6A30067905E /* RemoveCropView.swift in Sources */,
 				92E093F82B061E6D001FBDC5 /* WeeklyView.swift in Sources */,
+				925020AE2B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */,
 				9260A0EB2B0B35CA008B502E /* SelectCropView.swift in Sources */,
+				925020A62B176E5800E8DF46 /* DailyNoteModel.swift in Sources */,
 				9260A0DF2B071496008B502E /* DailyNoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,10 +523,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E093DF2B061E0D001FBDC5 /* secondMojongTests.swift in Sources */,
+				925020A72B176E5800E8DF46 /* DailyNoteModel.swift in Sources */,
 				92E707EC2B1380B600C0B8BD /* AddCropView.swift in Sources */,
 				92E707F12B13981100C0B8BD /* AlertView.swift in Sources */,
+				925020AB2B176E6900E8DF46 /* DailyNoteViewModel.swift in Sources */,
 				9245435E2B14CE8F008A2036 /* SearchView.swift in Sources */,
 				925682FD2B14C6A30067905E /* RemoveCropView.swift in Sources */,
+				925020AF2B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */,
 				92E707F52B139D5800C0B8BD /* CropModel.swift in Sources */,
 				9245435A2B14CE6B008A2036 /* SearchBar.swift in Sources */,
 			);
@@ -520,9 +541,12 @@
 			files = (
 				9245435B2B14CE6B008A2036 /* SearchBar.swift in Sources */,
 				92E093EB2B061E0D001FBDC5 /* secondMojongUITestsLaunchTests.swift in Sources */,
+				925020AC2B176E6A00E8DF46 /* DailyNoteViewModel.swift in Sources */,
 				92E707F62B139D5800C0B8BD /* CropModel.swift in Sources */,
+				925020A82B176E5800E8DF46 /* DailyNoteModel.swift in Sources */,
 				92E707F22B13981100C0B8BD /* AlertView.swift in Sources */,
 				9245435F2B14CE8F008A2036 /* SearchView.swift in Sources */,
+				925020B02B176E8700E8DF46 /* DailyNoteEditSheet.swift in Sources */,
 				92E707ED2B1380B600C0B8BD /* AddCropView.swift in Sources */,
 				925682FE2B14C6A30067905E /* RemoveCropView.swift in Sources */,
 				92E093E92B061E0D001FBDC5 /* secondMojongUITests.swift in Sources */,
