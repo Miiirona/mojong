@@ -14,7 +14,6 @@ struct SearchView: View {
     @Binding var isAnyCropSelected: Bool
     
     let columns = [GridItem(.adaptive(minimum: 100))]
-    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -32,7 +31,7 @@ struct SearchView: View {
                             }
                     }
                 }
-//                .frame(minHeight: 120)
+                .frame(minWidth: 344)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
                 
@@ -53,6 +52,7 @@ struct SearchView: View {
                                 }
                         }
                     }
+                    .frame(minWidth: 344)
                     .padding(.horizontal, 23)
                 }
                 

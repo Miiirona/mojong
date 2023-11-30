@@ -12,7 +12,9 @@ struct WholeWeekView: View {
         VStack {
             WeekHeaderView()
             WeeksTabView() { week in
-                WeekView(week: week)
+                VStack {
+                    WeekView(week: week)
+                }
             }
             .frame(height: 80)
         }

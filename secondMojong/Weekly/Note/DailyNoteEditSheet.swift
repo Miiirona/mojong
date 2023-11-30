@@ -15,7 +15,8 @@ struct DailyNoteEditSheet: View {
     @State private var noteTitle: String
     @State private var noteContent: String
     // 삭제 or 수정 버튼 누르면 뜨는 알럿 관리 변수
-    @State private var isDialogShowing: Bool = false
+    @State private var isDeleteDialogShowing: Bool = false
+    @State private var isEditDialogShowing: Bool = false
     
     var existingNote: DailyNoteModel
     
@@ -77,30 +78,34 @@ struct DailyNoteEditSheet: View {
                 .padding(.init(top: 20, leading: 41, bottom: 23, trailing: 43))
                 HStack {
                     Button(action: {
-                        self.isDialogShowing = true
-                        if isInputValid {
-                            deleteDailyNote()
-                            presentationMode.wrappedValue.dismiss()
-                        }
+                        self.isDeleteDialogShowing = true
                     }, label: {
                         rectangleBtn(context: "삭제하기", isFill: true, textColor: Color.White1, backgroundColor: Color.WarningRed)
                     })
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.warningRed, lineWidth: 1)
-                    )
+                    .alert(showAlert: $isDeleteDialogShowing) {
+                        AlertView(
+                            title: "기록을 삭제할까요?",
+                            btnIcon: Image(systemName: "checkmark.circle"),
+                            cancleBtn: AlertButtonView(showAlert: $isDeleteDialogShowing, action: {}, type: .CANCEL),
+                            removeBtn: AlertButtonView(showAlert: $isDeleteDialogShowing, action: {
+                                deleteDailyNote()
+                                presentationMode.wrappedValue.dismiss()
+                            }, type: .REMOVE)
+                        )
+                    }
+
                     .background(
                         Group {
-                            if isDialogShowing {
+                            if isDeleteDialogShowing || isEditDialogShowing {
                                 Color.black.opacity(0.5).ignoresSafeArea()
                             }
                         }
                     )
                     .overlay(
                         Group {
-                            if isDialogShowing {
+                            if isDeleteDialogShowing {
                                 DailyNoteCustomDialog(
-                                    isDialogShowing: $isDialogShowing,
+                                    isDialogShowing: $isDeleteDialogShowing,
                                     onDelete: deleteDailyNote
                                 )
                             }
@@ -110,14 +115,21 @@ struct DailyNoteEditSheet: View {
                     .disabled(!isInputValid)
                     
                     Button(action: {
-                        if isInputValid {
-                            updateDailyNote()
-                            
-                            presentationMode.wrappedValue.dismiss()
-                        }
+                        self.isEditDialogShowing = true
                     }, label: {
                         rectangleBtn(context: "수정하기", isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
                     })
+                    .alert(showAlert: $isEditDialogShowing) {
+                        AlertView(
+                            title: "기록을 수정했나요?",
+                            btnIcon: Image(systemName: "checkmark.circle"),
+                            cancleBtn: AlertButtonView(showAlert: $isEditDialogShowing, action: {}, type: .CANCEL),
+                            completedBtn: AlertButtonView(showAlert: $isEditDialogShowing, action: {
+                                updateDailyNote()
+                                presentationMode.wrappedValue.dismiss()
+                            }, type: .COMPLETED)
+                        )
+                    }
                     .disabled(!isInputValid)
                 }
                 .padding(.horizontal, 50)

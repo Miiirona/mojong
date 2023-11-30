@@ -85,8 +85,7 @@ public struct AlertView: View {
             VStack(spacing: 0) {
                 VStack(alignment: .center, spacing: 14) {
                     self.btnIcon
-                    //                        .resizable()
-                    //                        .frame(width: 18, height: 15)
+                    
                     if "" != self.title {
                         Text(self.title)
                             .foregroundColor(Color.Body1)

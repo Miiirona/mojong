@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WrappingHStack
 
 struct SelectCropView: View {
     @Binding var showAddCrop: Bool
@@ -37,18 +38,25 @@ struct SelectCropView: View {
             if cropList.crops.isEmpty {
                 Text("아직 추가된 작물이 없어요")
             } else {
-                //            LazyVGrid(columns: columns, content: {
-                //
-                //            })
-
-                ForEach(cropList.crops, id: \.name) { crop in
-                    Button {
-                        cropList.currentSelectedCrop = crop
-                        showSelectCrop.toggle()
-                    } label: {
-                        Text(crop.name)
+                WrappingHStack {
+                    ForEach(cropList.crops, id: \.name) { crop in
+                        Button {
+                            cropList.currentSelectedCrop = crop
+                            showSelectCrop.toggle()
+                        } label: {
+                            if cropList.currentSelectedCrop.name == crop.name {
+                                CropChip(name: crop.name, isFill: true, textColor: Color.White1, backgroundColor: Color.Secondary01)
+                                    .padding(.trailing, 10)
+                            } else {
+                                CropChip(name: crop.name, isFill: false, textColor: Color.Secondary01)
+                                    .padding(.trailing, 10)
+                            }
+                        }
                     }
                 }
+                .frame(minWidth: 344)
+                .padding(.leading, 23)
+
             }
             
             Spacer()
